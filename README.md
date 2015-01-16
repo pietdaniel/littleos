@@ -36,4 +36,15 @@ the intial kernel was linked with the following command
 ld -T link.ld -melf_i386 loader.o -o kernel.elf
 ```
 
+After getting the kernel file the following steps went rather smoothly.
 
+bochs was configured with a configuration file (bochsrc.txt) then run with the following command.
+
+```
+bochs -f bochsrc.txt -q
+```
+
+This opens a window and terminal dialogue. typing c into the shell starts GRUB up. I had some issues with the listed loader.s file and modifications were necessary. Namely GRUB didn't recognize the executable as a valid file. Thus some flags and altering of the checksum was needed. After this the kernel was loaded and deadb33f was dropped in the eax register.
+
+
+Now I can move on to getting C set up.
