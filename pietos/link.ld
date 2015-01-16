@@ -1,24 +1,27 @@
 ENTRY(loader)
 
-. = 0x00100000
-
-.text ALIGN (0x1000)
+SECTIONS
 {
-  *(.text)
-}
+  . = 0x00100000;
 
-.rodate ALIGN (0x1000)
-{
-  *(.rodata*)
-}
+  .text : ALIGN(0x1000)
+  {
+    *(.text)
+  }
 
-.data ALIGN (0x1000)
-{
-  *(.data)
-}
+  .rodata : ALIGN(0x1000)
+  {
+    *(.rodata*)
+  }
 
-.bss ALIGN (0x1000)
-{
-  *(COMMON)
-  *(.bss)
+  .data : ALIGN(0x1000)
+  {
+    *(.data)
+  }
+
+  .bss : ALIGN(0x1000)
+  {
+    *(COMMON)
+    *(.bss)
+  }
 }
