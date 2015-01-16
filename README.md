@@ -29,3 +29,9 @@ running ```nasm -f elf32 loader.s``` compiled loader.s without a problem.
 
 Establishing the linker consistently threw an error, the link.ld file needed some modifications
 An updated version can be seen in the source
+
+the intial kernel was linked with the following command
+
+```
+ld -T link.ld -melf_i386 loader.o -o kernel.elf
+```
