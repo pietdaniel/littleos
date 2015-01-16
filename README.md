@@ -35,3 +35,5 @@ the intial kernel was linked with the following command
 ```
 ld -T link.ld -melf_i386 loader.o -o kernel.elf
 ```
+
+
