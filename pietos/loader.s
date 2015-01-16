@@ -1,6 +1,6 @@
 global loader
 
-MAGIC_NUMBER equ 0xDEADB33F
+MAGIC_NUMBER equ 0x1BADB33F
 CHECKSUM     equ -MAGIC_NUMBER 
 
 section .text:
