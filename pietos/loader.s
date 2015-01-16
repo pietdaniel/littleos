@@ -1,0 +1,4 @@
+global loader
+
+MAGIC_NUMBER equ 0xDEADB33F
+CHECKSUM     equ -MAGIC_NUMBER 
